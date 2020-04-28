@@ -1,0 +1,1 @@
+RASPBERRY PI 3 B+ controls playback of MP4 video projected on architectural model using the OMX Player wrapper for Python.

@@ -1,0 +1,18 @@
+ - Change the destination of the python script in autostart.sh line 7
+ - Copy autostart.sh to the pi and remember the location (e.g. /home/pi/autostart.sh)
+ - Run the following command (without the $) on the pi to make the script executable (change the location to where you copied the autostart script)
+
+    $ chmod 755 /home/pi/autostart.sh
+
+ - Run the following command to edit cronjobs
+
+    $ crontab -u pi -e
+
+ - add the following to the end of the file (Replace <Screen Name> with a suitable screen name)
+
+    @reboot /usr/bin/screen -dmS <Screen-Name> /home/pi/autostart.sh
+
+ - Reboot the pi (sudo reboot)
+ - Type the following to access the screen and test if it worked (replace <Screen Name> with the given screen name)
+
+    $ screen -r <Screen Name>
